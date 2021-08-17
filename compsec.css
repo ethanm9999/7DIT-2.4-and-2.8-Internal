@@ -3,49 +3,113 @@
    padding: 0;
    box-sizing: border-box;
    font-family: 'Rubik', sans-serif;
+   text-decoration: none;
+   list-style: none;
 }
 
 body {
-  background-color: black;
-}
-
-nav li {
-  display: inline-block;
-}
-
-nav h2 {
-    float: right;
-    padding-right: 60px;
-}
-
-header h1 {
-  padding: 20px;
-  text-align: center;
-}
-
-header {
-  margin: 10px 60px 0 60px;
-  color: white;
+  background-color: black;s
 }
 
 nav {
-  padding: 20px;
-  border-bottom: 5px solid white;
-}
-
-nav a {
-  padding: 20px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 0 5%;
+  height: 100px;
+  background-color: black;
   color: white;
+  z-index: 10;
+  border-bottom: 2px solid white;
 }
 
+nav .logo {
+  float: left;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 36px;
+}
+
+nav ul {
+  float: right;
+  padding: 0;
+  margin: 0;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul a{
+  display: block;
+  padding: 1em;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav a{
+  color: white;
+  text-transform: uppercase;
+  padding: 0 20px;
+}
 nav a:hover{
   color: yellow;
 }
 
+i {
+  color: white;
+}
 
+nav ul h2 {
+  justify-content: flex-end;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 100px;
+  margin-right: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+.title {
+  margin: 60px 0 60px 0;
+  padding: 60px 60px;
+  color: white;
+}
+
+.flex-con
+.flex-container {
+  display: flex;
+}
+
+.flex-left-container {
+  color: white;
+}
+
+.flex-right-container {
+  color: white;
+}
 .nav a{
   color: white;
   text-decoration: none;
+  padding: 20px;
+  font-weight: 700;
 }
 
 .nav ul{
@@ -70,7 +134,7 @@ input {
 input[type="text"] {
   background: white;
   color: black;
-  width: 340px;
+  width: 240px;
   height: 50px;
   border: none;
   outline: none;
@@ -83,7 +147,7 @@ input[type="submit"]{
   color: black;
   left: -5px;
   border-radius: 0 25px 25px 0;
-  width: 150px;
+  width: 100px;
   height: 50px;
   border: none;
   outline: none;
@@ -98,11 +162,13 @@ input[type="submit"]:hover{
   color: white;
   display: flex;
   justify-content: space-between;
-  padding: 30px;
   margin: 30px;
+  padding: 30px;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
-#icon i{
+.icon i{
   font-size: 50px;
 }
 
@@ -126,4 +192,67 @@ input[type="submit"]:hover{
 .copyright {
   color: white;
   margin: 10px;
+}
+
+/*Media Queries */
+
+@media screen and (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  nav .logo {
+    float: none;
+    width: auto;
+    justify-content: center;
+  }
+  nav ul {
+    float: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 100px;
+    bottom: 100%;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    background: gray;
+    overflow: hidden;
+    z-index: 9;
+    transition: all .5s ease-in-out;
+  }
+  nav h2 li {
+    display: none;
+  }
+  nav ul a {
+    font-size: 24px;
+  }
+  #check:checked ~ ul{
+    bottom: 0;
+  }
+  .flex-container {
+    margin: 60px;
+    text-align: center;
+  }
+  .footer {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 40px;
+  }
+  input[type="text"] {
+    width: 240px;
+    height: 60px;
+    border-radius: 25px;
+  }
+  input[type="submit"] {
+    width: 240px;
+    height: 60px;
+    border-radius: 25px;
+  }
+  .flex-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
