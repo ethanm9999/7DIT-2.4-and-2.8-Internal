@@ -67,6 +67,7 @@ nav a:hover{
 
 i {
   color: white;
+<<<<<<< HEAD
 }
 
 .date {
@@ -84,6 +85,8 @@ i {
 }
 #year {
   font-weight: 700;
+=======
+>>>>>>> da72432eb811abf6b78cf6f92cbd6c505072c452
 }
 
 #welcome {
