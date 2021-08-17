@@ -1,0 +1,129 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Rubik', sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav h2 {
+    float: right;
+    padding-right: 60px;
+}
+
+header h1 {
+  padding: 20px;
+  text-align: center;
+}
+
+header {
+  margin: 10px 60px 0 60px;
+  color: white;
+}
+
+nav {
+  padding: 20px;
+  border-bottom: 5px solid white;
+}
+
+nav a {
+  padding: 20px;
+  color: white;
+}
+
+nav a:hover{
+  color: yellow;
+}
+
+
+.nav a{
+  color: white;
+  text-decoration: none;
+}
+
+.nav ul{
+  padding: 10px;
+}
+
+.nav a:hover{
+  color: yellow;
+}
+
+.address, .address input{
+  color: white;
+}
+
+input {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  box-sizing: border-box;
+  transition: .5s;
+}
+input[type="text"] {
+  background: white;
+  color: black;
+  width: 340px;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding: 0 25px;
+  border-radius: 25px 0 0 25px;
+}
+
+input[type="submit"]{
+  position: relative;
+  color: black;
+  left: -5px;
+  border-radius: 0 25px 25px 0;
+  width: 150px;
+  height: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: green;
+}
+input[type="submit"]:hover{
+  background-color: yellow;
+}
+
+.footer {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  margin: 30px;
+}
+
+#icon i{
+  font-size: 50px;
+}
+
+.icons li {
+  list-style: none;
+  margin: 18px;
+  padding: 10px 10px;
+  display: inline-block;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  transition: .5s;
+}
+
+.icons li:hover {
+  color: yellow;
+  border: 3px solid yellow;
+  transition: .5s;
+}
+
+.copyright {
+  color: white;
+  margin: 10px;
+}
