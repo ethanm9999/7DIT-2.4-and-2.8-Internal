@@ -113,18 +113,19 @@ i {
   margin-top: 20px;
 }
 
-.checkbtn {
-  font-size: 30px;
+.title {
+  margin: 60px 60px 0 60px;
+  padding: 60px 60px 0 60px;
   color: white;
-  float: right;
-  line-height: 100px;
-  margin-right: 10px;
-  cursor: pointer;
-  display: none;
+  text-align: center;
 }
 
-#check {
-  display: none;
+.about-title {
+  margin: 60px;
+  padding: 60px;
+  color: white;
+  text-align: center;
+  border-bottom: 5px solid white;
 }
 
 .container {
@@ -212,6 +213,26 @@ img {
   color: yellow;
 }
 
+#nav-toggle {
+  position: absolute;
+}
+
+nav .icon-burger {
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+nav .icon-burger .line{
+  width: 30px;
+  height: 5px;
+  background: white;
+  margin: 5px;
+  border-radius: 3px;
+}
+
 .address, .address input{
   color: white;
 }
@@ -289,7 +310,11 @@ input[type="submit"]:hover{
 /*Media Queries */
 
 @media screen and (max-width: 858px){
-  .checkbtn{
+  #nav-toggle {
+    position: absolute;
+    top: -100px;
+  }
+  nav .icon-burger{
     display: block;
   }
   nav .logo {
@@ -307,7 +332,7 @@ input[type="submit"]:hover{
     width: auto;
     height: auto;
     flex-direction: column;
-    background: gray;
+    background-color: rgba(0,0,0,.8);
     overflow: hidden;
     z-index: 9;
     transition: all .5s ease-in-out;
@@ -318,7 +343,7 @@ input[type="submit"]:hover{
   nav ul a {
     font-size: 24px;
   }
-  #check:checked ~ ul{
+  nav :checked ~ ul{
     bottom: 0;
   }
   .footer {
@@ -350,5 +375,17 @@ input[type="submit"]:hover{
   .flex-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+  nav .icon-burger .line{
+    transition: all .3s ease-in-out;
+  }
+  nav :checked ~ .icon-burger .line:nth-child(1) {
+    transform: translateY(10px) rotate(225deg);
+  }
+  nav :checked ~ .icon-burger .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-225deg);
+  }
+  nav :checked ~ .icon-burger .line:nth-child(2) {
+    opacity: 0;
   }
 }
