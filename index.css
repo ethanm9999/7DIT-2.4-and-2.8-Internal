@@ -200,7 +200,7 @@ i {
 }
 
 .box img {
-  height: 25vh;
+  height: 170px;
 }
 
 img {
@@ -257,6 +257,7 @@ nav .icon-burger .line{
   margin: 20px;
 }
 
+/* Input for the email notification if subscribed (JS not needed). */
 input {
   position: relative;
   display: inline-block;
@@ -291,6 +292,7 @@ input[type="submit"]:hover{
   background-color: yellow;
 }
 
+/* Footer (second to the last layer) for the whole 4 containers separated for this website information and email notif. */
 .footer {
   color: white;
   display: flex;
@@ -302,10 +304,12 @@ input[type="submit"]:hover{
   text-align: center;
 }
 
+/* Size of the icon on the first container of the footer */
 .icon i{
   font-size: 50px;
 }
 
+/* List of social media icons (circles) */
 .icons li {
   list-style: none;
   margin: 10px;
@@ -317,12 +321,14 @@ input[type="submit"]:hover{
   transition: .5s;
 }
 
+/*Click on one of 5 social media icons the yellow around it glows */
 .icons li:hover {
   color: yellow;
   border: 3px solid yellow;
   transition: .5s;
 }
 
+/* Last layer of my website */
 .copyright {
   color: white;
   margin: 10px;
