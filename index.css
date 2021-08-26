@@ -1,3 +1,4 @@
+/* Whole webpage */
 * {
    margin: 0;
    padding: 0;
@@ -7,10 +8,12 @@
    list-style: none;
 }
 
+/*Color of body background including navigation bar */
 body {
   background-color: black;
 }
 
+/*Navigation lists and Bar */
 nav {
   position: fixed;
   left: 0;
@@ -65,15 +68,18 @@ nav a:hover{
   color: yellow;
 }
 
+/*Color of icon */
 i {
   color: white;
 }
 
+/* Date on top right corner beside "About" list */
 .date {
   padding-left: 20px;
   text-align: center;
 }
 
+/*Font weight of the Date Day, DD/MM/YYYY */
 #dayname {
   font-weight: 700;
 }
@@ -88,6 +94,7 @@ i {
   font-weight: 700;
 }
 
+/* Welcome background */
 #welcome {
   background-image: url(images/photo-1618060931775-18ed14951776.jpg);
   height: 400px;
@@ -101,6 +108,7 @@ i {
   margin: 120px 0 30px 0;
 }
 
+/*Greeting on the overlaping welcome image*/
 #welcome h1{
   font-size: 50px;
   color: white;
@@ -132,6 +140,11 @@ i {
   border-top: 5px solid white;
 }
 
+.blog-container, .blog-container h1 {
+  margin: 120px 0 0 0;
+  color: white;
+}
+
 .icon-container h5{
   margin: 20px 0 0 0;
   padding: 20px;
@@ -139,6 +152,7 @@ i {
   align-items: center;
 }
 
+/*Horizontal 4 columns for 4 computer topics*/
 #horizontal-nav {
   width: 100%;
   display: grid;
@@ -147,6 +161,7 @@ i {
   padding: 0 45px 0 15px;
 }
 
+/* Flex container for intersting stuff using sources*/
 .flex-container {
   display: flex;
   margin: 0 30px 0 30px;
@@ -224,6 +239,7 @@ img {
   color: yellow;
 }
 
+/*This is for the media query located top right as hamburger menu for navigation lists including date*/
 #nav-toggle {
   position: absolute;
   top: -100px;
@@ -245,6 +261,7 @@ nav .icon-burger .line{
   border-radius: 3px;
 }
 
+/*For the email notification phrase */
 .address, .address input{
   color: white;
 }
@@ -253,6 +270,7 @@ nav .icon-burger .line{
   margin: 20px;
 }
 
+/*Social media icons separated by circles and the phrase*/
 .icons {
   margin: 20px;
 }
@@ -336,7 +354,7 @@ input[type="submit"]:hover{
 
 /*Media Queries */
 
-@media (max-width: 1250px){
+@media (max-width: 1000px){
   .footer {
     justify-content: center;
     text-align: center;
@@ -351,7 +369,31 @@ input[type="submit"]:hover{
     font-size: 24px;
   }
 }
-@media screen and (max-width: 608px){
+@media (max-width: 800px){
+  .icons li{
+    margin: 5px 2px 0px 2px;
+  }
+  input[type="text"]{
+    width: 185px;
+  }
+  .icons h2, .address h2{
+    text-align: center;
+    font-size: 18px;
+  }
+  .footer{
+    grid-gap: 2px;
+  }
+}
+@media (max-width: 320px){
+  input[type="text"]{
+    width: 75px;
+  }
+  .icons li{
+    margin: 5px 1px 0 1px;
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 650px){
   nav .icon-burger{
     display: block;
   }
@@ -415,6 +457,9 @@ input[type="submit"]:hover{
   }
   .address h2{
     font-size: 18px;
+  }
+  input[type="text"]{
+    width: 100px:
   }
   .copyright {
     text-align: center;
