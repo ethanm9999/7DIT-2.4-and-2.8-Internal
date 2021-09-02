@@ -219,6 +219,7 @@ i {
   border-left: 5px solid white;
 }
 
+/*For 4 min topic webpages so Computer security, Error control, encryption and computer technology*/
 .four-topic-menu{
   color: white;
   display: flex;
@@ -236,6 +237,7 @@ i {
 .four-topic-menu a:hover{
   color: yellow;
 }
+/*For main webpage on the Facts and News section so after 4 box horizontal columns*/
 .facts {
   margin: 20px;
 }
@@ -264,6 +266,7 @@ i {
   color: yellow;
 }
 
+/*This is for the 4 horizontal columns containing 4 main topics for Computer Science*/
 .box {
   height: 300px;
   color: white;
@@ -295,6 +298,7 @@ img {
   height: 100vh;
 }
 
+/*This is for the footer of navigation list located at second container of footer section*/
 .nav a{
   color: white;
   text-decoration: none;
@@ -341,7 +345,7 @@ nav .icon-burger .line{
 .address h2 {
   font-size: 18px;
   text-transform: uppercase;
-  margin: 0 0 10px 0;
+  margin: 0;
 }
 
 /*Social media icons separated by circles and the phrase*/
@@ -434,6 +438,7 @@ input[type="submit"]:hover{
 
 /*Media Queries */
 
+/*Footer when one of containers reaches the 0px gap beside*/
 @media screen and (max-width: 1050px){
   .footer {
     justify-content: center;
@@ -449,6 +454,7 @@ input[type="submit"]:hover{
     font-size: 18px;
   }
 }
+/*Navigation when a very first one of the nav list or an icon reaches beside*/
 @media screen and (max-width: 900px){
   nav .icon-burger{
     display: block;
@@ -552,6 +558,7 @@ input[type="submit"]:hover{
     margin: 0 0 0 20px;
   }
 }
+/*For the 4 main topic webpages when one of the links becomes squeezed and very close to each other*/
 @media (max-width:570px){
   .four-topic-menu{
     display: grid;
