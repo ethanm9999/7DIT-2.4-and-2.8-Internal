@@ -40,7 +40,7 @@ nav .logo {
 
 nav ul {
   float: right;
-  padding: 0;
+  padding-right: 10px;
   margin: 0;
   width: 60%;
   height: 100%;
@@ -114,14 +114,22 @@ i {
 #welcome h1{
   font-size: 50px;
   color: white;
-  background-color: none;
-  padding-top: 100px;
+  padding-top: 120px;
+}
+
+#welcome h6{
+  float: right;
+  margin-bottom: 100px;
 }
 
 .title {
   margin: 120px 30px 30px 30px;
   color: white;
   text-align: center;
+}
+
+.title p{
+  margin-top: 10px;
 }
 
 .about-title {
@@ -142,25 +150,27 @@ i {
   border-top: 3px solid white;
 }
 
+/* Contents.html container */
+.contents-container {
+  border-top: 3px solid white;
+}
+
+/*Blog Webpage*/
 .blog-container, .blog-title h1 {
   margin: 120px 0 0 0;
   color: white;
 }
 
-.blog-container {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
+.blog-container{
   display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(var(--bs-gutter-y) * -1);
-  margin-right: calc(var(--bs-gutter-x) / -2);
-  margin-left: calc(var(--bs-gutter-x) / -2);
 }
 
-.blog-container .columns{
-  flex: 0 0 auto;
-  width: 50%;
+.columns.content {
+  height: 250px;
+  margin: 30px;
 }
+
+/*This is for first container of the footer */
 .icon-container h5{
   margin: 20px 0 0 0;
   padding: 20px;
@@ -178,29 +188,32 @@ i {
 }
 
 .compsec-container{
-  border-bottom: 5px solid white;
-  border-top: 5px solid white;
+  border-bottom: 3px solid white;
+  border-top: 3px solid white;
 }
 .flex-compsec-container {
   display: flex;
-  margin: 10px 30px 10px 30px;
-  justify-content: center;
-  align-items: center;
+  margin: 10px 10px 10px 30px;
   color: white;
-  flex-wrap: wrap;
 }
-/* Flex container for 5 intersting topics using sources for Computer Science*/
+
+.flex-compsec-container > *:nth-child(1) {
+  flex: 1 1 90%;
+}
+.flex-compsec-container > *:nth-child(2) {
+  flex: 1 1 50%;
+}
+/* Flex container for 4 intersting topics using sources for Computer Science*/
 .flex-container {
   display: flex;
   margin: 0px 30px 0px 30px;
   border-bottom: 3px solid white;
   border-top: 3px solid white;
-  justify-content: center;
-  text-align: center;
   color: white;
 }
 .flex-left-container a{
   color: white;
+  text-decoration: underline;
 }
 .flex-container > *:nth-child(1){
     flex: 1 1 50%;
@@ -208,17 +221,97 @@ i {
 .flex-container > *:nth-child(2){
   flex: 1 1 50%;
 }
-.flex-compsec-container > *:nth-child(1){
-  flex: 1 1 70%;
-  min-width: 30ch;
+.flex-left-container{
+  margin: 5px;
+}
+.flex-left-container ul li{
+  padding: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.flex-left-container a:hover{
+  color: yellow;
 }
 
-.flex-compsec-container > *:nth-child(2){
-  flex: 1 1 30%;
-  min-width: 15ch;
-  border-left: 5px solid white;
+/* Flex left box for all 4 CS Topics*/
+.flex-left-box {
+  margin: 20px;
+  border: 1px solid white;
+  width: 80%;
+  border-radius: 5px;
 }
 
+.flex-left-box h3, .flex-left-box p {
+  padding: 10px;
+}
+
+.flex-left-box a:hover {
+  color: yellow;
+}
+.flex-left-box img{
+  height: 300px;
+}
+
+
+
+/*Flex right box for Facts news and trivias about 4 CS Topics*/
+.flex-right-facts a{
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.flex-right-news{
+  margin: 20px 0 20px 0;
+}
+
+.flex-right-facts li {
+  padding: 5px 0 5px 5px;
+}
+
+.flex-right-facts a:hover{
+  color: yellow;
+}
+.flex-right-news a{
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.flex-right-news li {
+  padding: 5px 0 5px 5px;
+}
+
+.flex-right-news a:hover{
+  color: yellow;
+}
+
+.flex-right-trivias a{
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.flex-right-trivias a:hover{
+  color: yellow;
+}
+
+.flex-right-trivias li {
+  padding: 5px 0 5px 5px;
+}
+
+.flex-right-container{
+  padding: 20px 0 0 0;
+  margin-right: 40px;
+  width: 15%:
+}
+
+.flex-right-news h2, .flex-right-facts h2, .flex-right-trivias h2{
+  text-align: center;
+}
 /*For 4 min topic webpages so Computer security, Error control, encryption and computer technology*/
 .four-topic-menu{
   color: white;
@@ -238,11 +331,11 @@ i {
   color: yellow;
 }
 /*For main webpage on the Facts and News section so after 4 box horizontal columns*/
-.facts {
+.facts ul li{
   margin: 20px;
 }
 
-.news {
+.news ul li{
   margin: 20px;
 }
 
@@ -256,10 +349,11 @@ i {
   font-weight: 600;
 }
 
-.facts h1, .news h1 {
+.facts h2, .news h2 {
   color: white;
   text-align: center;
   padding: 10px;
+  margin-top: 10px;
 }
 
 .facts a:hover, .news a:hover{
@@ -308,7 +402,11 @@ img {
 }
 
 .nav ul{
-  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.nav ul li{
+  padding: 10px 0 10px 0;
 }
 
 .nav a:hover{
@@ -350,7 +448,7 @@ nav .icon-burger .line{
 
 /*Social media icons separated by circles and the phrase*/
 .icons {
-  margin: 20px;
+  margin: 10px;
 }
 
 .icons h2{
@@ -400,11 +498,12 @@ input[type="submit"]:hover{
   color: white;
   display: flex;
   justify-content: space-between;
-  margin: 5px 30px 0 30px;
+  padding: 10px 30px 0 30px;
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   text-align: center;
+  border-top: 3px solid white;
 }
 
 /* Size of the icon on the first container of the footer */
@@ -413,7 +512,7 @@ input[type="submit"]:hover{
 }
 
 /* List of social media icons (circles) */
-.icons li {
+.icons ul li {
   list-style: none;
   margin: 10px;
   padding: 10px 10px;
@@ -505,7 +604,7 @@ input[type="submit"]:hover{
   }
 }
 @media screen and (max-width: 800px){
-  .icons li{
+  .icons ul li{
     margin: 5px 2px 0px 2px;
   }
   input[type="text"]{
@@ -521,6 +620,9 @@ input[type="submit"]:hover{
 }
 /*For phone smaller than Iphone 6s or older*/
 @media screen and (max-width: 336px){
+  #welcome h1{
+    padding-top: 90px;
+  }
   input[type="text"]{
     width: 75px;
   }
@@ -544,7 +646,7 @@ input[type="submit"]:hover{
     margin: 0 10px 0 0;
   }
   .footer {
-    margin: 30px 0 0 0;
+    margin: 10px 0 0 0;
     justify-content: center;
     text-align: center;
     display: grid;
@@ -563,12 +665,22 @@ input[type="submit"]:hover{
   .four-topic-menu{
     display: grid;
     grid-template-columns: 2fr 2fr;
-    grid-gap: 20px;
-    padding: 0 20px 0 0;
+    grid-gap: 10px;
+    padding: 0;
   }
 }
 /* For the phone */
 @media screen and (max-width: 450px){
+  #welcome h1{
+    padding-top: 90px;
+  }
+  .blog-container {
+    flex-direction: column;
+  }
+  .flex-left-box{
+    margin: 10px 10px;
+    width: 90%;
+  }
   .footer {
     margin: 30px 0 0 0;
     justify-content: center;
@@ -591,10 +703,14 @@ input[type="submit"]:hover{
     display: flex;
     flex-direction: column;
   }
+  .flex-compsec-container{
+    flex-direction: column;
+    text-align: center;
+  }
   .four-topic-menu {
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 1fr;
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 10px;
     padding: 0 20px 0 0;
   }
   .icons li{
@@ -611,7 +727,7 @@ input[type="submit"]:hover{
     margin: 0 10px 0 10px;
   }
   input[type="text"]{
-    width: 95px:
+    width: 95px;
   }
   .copyright {
     text-align: center;
