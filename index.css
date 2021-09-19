@@ -679,7 +679,10 @@ input[type="submit"]:hover{
   }
   .flex-left-box{
     margin: 10px 10px;
-    width: 90%;
+    width: 85%;
+  }
+  .flex-left-box img{
+    height: 200px;
   }
   .footer {
     margin: 30px 0 0 0;
@@ -702,6 +705,9 @@ input[type="submit"]:hover{
   .flex-container{
     display: flex;
     flex-direction: column;
+  }
+  .flex-right-container{
+    margin-left: 10px;
   }
   .flex-compsec-container{
     flex-direction: column;
